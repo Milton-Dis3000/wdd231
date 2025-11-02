@@ -37,12 +37,78 @@ header span {
   grid-column: 4;
 }
 
-/* HAMBURGER ICON */
 .hamburger::before {
   content: "\2630";
 }
 
-/* CLOSE ICON */
 .hamburger.show::before {
   content: "\00D7";
+}
+
+/* --- SITE NAVIGATION (MOBILE) --- */
+.navigation {
+  display: none; 
+  background-color: #444; 
+}
+
+.navigation.show {
+  display: block; 
+}
+
+/* Wayfinding and link styles */
+.navigation ul {
+  list-style: none;
+  padding: 0; 
+  margin: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  text-align: center; 
+}
+
+.navigation li.current {
+  background-color: #666; 
+}
+
+/* --- LARGE SCREEN STYLES (Min-width: 768px) --- */
+@media screen and (min-width: 768px) {
+
+  .navigation {
+    display: block; 
+    background-color: #555;
+  }
+
+  .hamburger {
+    display: none; 
+  }
+
+  .navigation ul {
+    display: flex; 
+  }
+
+  .navigation li {
+    flex: 1 1 100%; 
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .navigation li:last-child {
+    border-right: none;
+  }
+
+  .navigation a {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 15px 0; 
+    text-align: initial; 
+  }
+
+  .navigation li.current {
+    background-color: #4A4A4A; 
+    border-bottom: none;
+  }
 }
