@@ -1,0 +1,48 @@
+/* --- GLOBAL HEADER LAYOUT --- */
+header {
+  grid-template-columns: 32px 1.5rem auto 44px; 
+  display: grid;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white; 
+}
+
+/* --- LOGO STYLES --- */
+header img {
+  width: 32px;
+  height: 32px;
+  filter: invert(100%);
+}
+
+/* --- SITE NAME TEXT --- */
+header span {
+  font-size: 1.2rem;
+  white-space: nowrap;
+  grid-column: 3;
+}
+
+/* --- HAMBURGER BUTTON STYLES --- */
+.hamburger {
+  justify-self: end;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  font-size: 1.5rem;
+  color: white; 
+  grid-column: 4;
+}
+
+/* HAMBURGER ICON */
+.hamburger::before {
+  content: "\2630";
+}
+
+/* CLOSE ICON */
+.hamburger.show::before {
+  content: "\00D7";
+}
