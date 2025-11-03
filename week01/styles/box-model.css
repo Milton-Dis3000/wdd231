@@ -8,14 +8,12 @@ header {
   color: white; 
 }
 
-/* --- LOGO STYLES --- */
 header img {
   width: 32px;
   height: 32px;
   filter: invert(100%);
 }
 
-/* --- SITE NAME TEXT --- */
 header span {
   font-size: 1.2rem;
   white-space: nowrap;
@@ -55,7 +53,7 @@ header span {
   display: block; 
 }
 
-/* Wayfinding and link styles */
+/* Wayfinding and link styles (Mobile) */
 .navigation ul {
   list-style: none;
   padding: 0; 
@@ -72,6 +70,50 @@ header span {
 
 .navigation li.current {
   background-color: #666; 
+}
+
+/* --- FOOTER STYLES --- */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Social Media Container */
+.social-links {
+    display: flex; 
+    justify-content: center; 
+    column-gap: 8px; 
+    margin: 10px 0;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 38px; /* Tamaño del círculo ajustado */
+    height: 38px; /* Tamaño del círculo ajustado */
+    border: #ccc solid 1px; 
+    border-radius: 50%; 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.social-links a:hover {
+    background-color: #ddd; 
+    border-color: #ddd; 
+}
+
+.social-links img {
+    width: 24px; /* Tamaño del ícono ajustado */
+    height: 24px; /* Tamaño del ícono ajustado */
+    filter: invert(100%); 
+    transition: filter 0.3s; 
+}
+
+.social-links a:hover img {
+    filter: invert(0%); /* Ícono NEGRO al hacer hover */
 }
 
 /* --- LARGE SCREEN STYLES (Min-width: 768px) --- */
