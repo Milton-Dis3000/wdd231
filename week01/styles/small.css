@@ -1,0 +1,217 @@
+/* --- global styles --- */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4; 
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; 
+    margin: 0.5rem 0;
+}
+
+main {
+    padding: 1rem;
+}
+
+/* Justify text inside sections */
+.card p {
+    text-align: justify;
+}
+
+/* --- header and navigation --- */
+header {
+    grid-template-columns: 32px 1fr 44px; 
+    display: grid;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white; 
+}
+
+header img {
+    width: 32px;
+    height: 32px;
+    filter: invert(100%);
+}
+
+header span {
+    font-size: 1.2rem;
+    white-space: nowrap;
+    grid-column: 2; 
+    padding-left: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hamburger {
+    justify-self: end;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    color: white; 
+    grid-column: 3;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+.navigation {
+    display: none; 
+    background-color: #444; 
+}
+
+.navigation.show {
+    display: block; 
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    text-align: center; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navigation li.current {
+    background-color: #666; 
+}
+
+/* --- section card styles --- */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: -1rem -1rem 1rem -1rem; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+/* --- photo centering --- */
+#student-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#student-photo img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+/* --- course card styles --- */
+#course-cards {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.course-card {
+    border: 1px solid #aaa;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.course-card.completed {
+    background-color: #d4edda; 
+    border-color: #c3e6cb;
+    box-shadow: 0 0 5px rgba(0, 150, 0, 0.5);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.filter-buttons button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+    transition: background-color 0.2s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filter-buttons button:hover {
+    background-color: #666;
+}
+
+
+/* --- footer styles --- */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex; 
+    justify-content: center; 
+    column-gap: 8px; 
+    margin: 10px 0;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 38px;
+    height: 38px;
+    border: #ccc solid 1px; 
+    border-radius: 50%; 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.social-links a:hover {
+    background-color: #ddd; 
+    border-color: #ddd; 
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); 
+    transition: filter 0.3s; 
+}
+
+.social-links a:hover img {
+    filter: invert(0%); 
+}

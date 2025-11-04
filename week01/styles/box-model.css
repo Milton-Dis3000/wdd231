@@ -93,8 +93,8 @@ footer {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    width: 38px; /* Tamaño del círculo ajustado */
-    height: 38px; /* Tamaño del círculo ajustado */
+    width: 38px; 
+    height: 38px; 
     border: #ccc solid 1px; 
     border-radius: 50%; 
     transition: background-color 0.3s, border-color 0.3s; 
@@ -106,14 +106,14 @@ footer {
 }
 
 .social-links img {
-    width: 24px; /* Tamaño del ícono ajustado */
-    height: 24px; /* Tamaño del ícono ajustado */
+    width: 24px; 
+    height: 24px; 
     filter: invert(100%); 
     transition: filter 0.3s; 
 }
 
 .social-links a:hover img {
-    filter: invert(0%); /* Ícono NEGRO al hacer hover */
+    filter: invert(0%); 
 }
 
 /* --- LARGE SCREEN STYLES (Min-width: 768px) --- */
