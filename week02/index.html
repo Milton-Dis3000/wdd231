@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Dis. Milthon Sigcha - Course Home Page</title>
+    <meta name="description" content="Course Home Page for WDD 231 by Dis. Milthon Sigcha, demonstrating responsive design and dynamic data handling.">
+    <meta name="author" content="Dis. Milthon Sigcha">
+
+    <link rel="icon" href="favicon.ico"> 
+
+    <meta property="og:title" content="WDD 231 | Milthon Sigcha - Graphic Design & Web Development">
+    <meta property="og:description" content="Soy Milthon Sigcha, diseñador gráfico e ingeniero en formación web en BYU-Idaho. Mi portafolio demuestra diseño responsive, manejo de datos y la fusión entre arte visual y tecnología.">
+    
+    <meta property="og:image" content="https://milton-dis3000.github.io/wdd231/week02/images/profile.webp"> 
+    <meta property="og:url" content="https://milton-dis3000.github.io/wdd231/week02/index.html"> 
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="site logo" width="32" height="32"> 
+        <span>Dis. Milthon Sigcha</span>
+        <button id="menu" class="hamburger" aria-label="navigation"></button> 
+    </header>
+    
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber Project</a></li>
+            <li><a href="final/index.html">Final Project</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1>Home</h1>
+        
+        <div class="main-grid">
+            <section id="about-me" class="card">
+                <h2>About Me</h2>
+                <p>I’m Milthon Efrain Sigcha, a Graphic Design Engineer from Ecuador and a BYU–Idaho student. For several years, I’ve been creating visual content, corporate branding, and graphic design, helping businesses build strong and memorable identities.
+
+            My design style is minimalist, vibrant, and elegant, always focused on capturing the unique essence of each project. I’m currently in training as a web developer, aiming to combine my creative background with digital tools that enhance my designs.
+
+            I’m passionate about learning, innovating, and continuing to grow professionally in the world of design and technology.</p>
+            </section>
+
+            <section id="student-photo" class="card">
+                <h2>Student Photo</h2>
+                <img src="images/profile.webp" alt="Student Photo of Milthon Sigcha" loading="lazy">
+            </section>
+        </div>
+
+        <section id="courses" class="card">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button id="btn-all">All</button>
+                <button id="btn-cse">CSE</button>
+                <button id="btn-wdd">WDD</button>
+            </div>
+            
+            <div id="course-cards" class="card-grid">
+                </div>
+            
+            <p>The total credits for courses listed above is <span id="total-credits">0</span></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Milton-Dis3000" target="_blank">
+                <img src="images/github.svg" alt="GitHub" width="24" height="24">
+            </a>
+            
+            <a href="https://www.linkedin.com/in/milthon-e-sigcha-242849220" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+            </a>
+            
+            <a href="https://www.instagram.com/miltonefrainsigc?utm_source=qr&igsh=MWR6M2s2OXozemk4aw==" target="_blank">
+                <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+            </a>
+        </div>
+        
+        <p>&copy;<span id="currentyear"></span> | Dis. Milthon Sigcha | Ecuador</p>
+        
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    
+    </body>
+</html>
