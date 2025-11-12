@@ -1,0 +1,47 @@
+/* === medium (tablet) === */
+@media screen and (min-width: 640px) {
+
+    /* --- header styles --- */
+    .hamburger { display: none; }
+    header { grid-template-columns: auto 1fr; padding: 1.5rem 0; }
+    header span { padding-left: 2rem; }
+
+    /* --- navigation styles --- */
+    .navigation, .navigation.open {
+        display: block;
+        background-color: var(--secondary-color);
+        width: 100%;
+    }
+    .navigation ul {
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .navigation li {
+        flex: 1;
+        text-align: center;
+        border-right: 1px solid var(--primary-color);
+    }
+    .navigation li:last-child { border-right: none; }
+    .navigation a {
+        border: none;
+        padding: 1rem 0.5rem;
+    }
+    .navigation a.active {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    /* --- directory layout styles --- */
+    #member-cards.grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

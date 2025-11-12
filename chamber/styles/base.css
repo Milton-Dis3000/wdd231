@@ -1,0 +1,235 @@
+/* --- global variables --- */
+:root {
+    --primary-color: #003366;
+    --secondary-color: #4AA0D7;
+    --accent-color: #FFCC00;
+    --text-dark: #333333;
+    --background-light: #F7F7F7;
+    --hover-subtle: rgba(0, 51, 102, 0.05);
+}
+
+/* --- base styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-size: 16px;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+}
+
+main {
+    padding: 1rem;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+main h2 {
+    text-align: center;
+}
+
+/* --- header styles --- */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 1rem;
+    width: 100%;
+}
+
+header img {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+
+header span {
+    font-size: 1.4rem;
+    padding-left: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.hamburger {
+    width: 65px;
+    height: 65px;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 2.2rem;
+}
+.hamburger::before { content: "\2630"; }
+.hamburger.open::before { content: "\00D7"; }
+
+/* --- navigation styles --- */
+.navigation {
+    background-color: var(--secondary-color);
+    display: none;
+    width: 100%;
+}
+.navigation.open { display: block; }
+.navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.navigation a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.75rem;
+    text-decoration: none;
+    border-top: 1px solid var(--primary-color);
+    transition: background 0.3s;
+}
+.navigation a.active, .navigation a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* --- view switch styles --- */
+.menu-view {
+    text-align: center;
+    margin: 1.5rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.menu-view button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--secondary-color);
+    background: white;
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+.menu-view button img {
+    filter: invert(30%) sepia(80%) saturate(2000%) hue-rotate(180deg);
+}
+.menu-view button.active {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+.menu-view button.active img {
+    filter: invert(100%) brightness(100%) saturate(0%);
+}
+.menu-view button:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.menu-view button:hover:not(.active) img {
+    filter: invert(60%) sepia(90%) saturate(1000%);
+}
+
+/* --- directory cards styles --- */
+#member-cards section {
+    background: white;
+    text-align: center;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+#member-cards section:hover { transform: translateY(-5px); }
+#member-cards img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+#member-cards a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* grid view */
+#member-cards.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* list view */
+#member-cards.list {
+    display: block;
+    border-top: 1px solid var(--secondary-color);
+}
+#member-cards.list section {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0.8rem 1rem;
+    background: white;
+    text-align: left;
+    border-bottom: 1px solid var(--secondary-color);
+    display: grid;
+    gap: 0.5rem;
+}
+#member-cards.list section:hover {
+    background: var(--hover-subtle);
+}
+#member-cards.list section img { display: none; }
+
+/* --- footer styles --- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+footer a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.social-links a:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.social-links img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    transition: 0.3s;
+}
+.social-links a:hover img {
+    filter: invert(0%);
+}

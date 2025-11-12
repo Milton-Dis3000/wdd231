@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Directory - Latacunga Chamber of Commerce</title>
+
+  <meta name="description" content="Official member directory for the Latacunga Chamber of Commerce. Find local businesses in the region.">
+  <meta name="author" content="Milthon E. Sigcha">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 640px)">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 960px)">
+
+  <meta property="og:title" content="Latacunga Chamber Directory">
+  <meta property="og:description" content="Official member directory for the Latacunga Chamber of Commerce.">
+  <meta property="og:image" content="https://milton-dis3000.github.io/wdd231/chamber/images/logo.webp">
+  <meta property="og:url" content="https://milton-dis3000.github.io/wdd231/chamber/directory.html">
+
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.webp" alt="Latacunga Chamber Logo" width="60" loading="lazy">
+    <span>Latacunga Chamber of Commerce</span>
+    <button id="menu" class="hamburger" aria-label="Open navigation"></button>
+  </header>
+
+  <nav class="navigation" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html" class="active">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Chamber Member Directory</h2>
+
+    <div class="menu-view" role="toolbar" aria-label="Layout view switch">
+      <button id="grid" class="active" aria-pressed="true">
+        <img src="images/grid.svg" alt="Grid View" width="24" height="24">
+      </button>
+      <button id="list" aria-pressed="false">
+        <img src="images/list.svg" alt="List View" width="24" height="24">
+      </button>
+    </div>
+
+    <div id="member-cards" class="grid" aria-live="polite"></div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="social-links">
+        <a href="https://github.com/Milton-Dis3000" target="_blank" rel="noopener noreferrer">
+          <img src="images/github.svg" alt="GitHub" width="24" height="24">
+        </a>
+        <a href="https://www.linkedin.com/in/milthon-e-sigcha-242849220" target="_blank" rel="noopener noreferrer">
+          <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com/miltonefrainsigc" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+        </a>
+      </div>
+
+      <p>&copy; <span id="currentyear"></span> | Dis. Milthon Sigcha | Ecuador | WDD231</p>
+      <p>Last Modified: <span id="lastmodified"></span></p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+
+</body>
+</html>
