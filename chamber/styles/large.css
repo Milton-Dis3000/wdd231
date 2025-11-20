@@ -1,32 +1,87 @@
-/* --- large (desktop) styles --- */
+/* --- large view (desktop / min-width 960px) --- */
 @media screen and (min-width: 960px) {
-
-    /* --- main layout styles --- */
-    main {
-        padding: 1.5rem 0;
-        max-width: 90%;
+    
+    /* --- header and navigation styles --- */
+    .hamburger { 
+        display: none; 
+    }
+    header { 
+        grid-template-columns: auto 1fr; 
+        padding: 1.5rem 0; 
+    }
+    
+    .navigation, .navigation.open {
+        display: block;
+        width: 100%;
+    }
+    
+    .navigation ul {
+        flex-direction: row; 
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .navigation li {
+        flex: 1; 
+        text-align: center;
+        border-right: 1px solid var(--primary-color);
+    }
+    .navigation li:last-child { 
+        border-right: none; 
+    }
+    .navigation a {
+        border: none;
+        padding: 1rem 0.5rem;
+        background-color: transparent;
+    }
+    
+    
+    /* --- home page layouts --- */
+    .home-grid, .spotlights-grid {
+        max-width: 1200px; 
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+    
+    .hero-section {
+        width: 100vw; 
+        margin-left: calc(50% - 50vw); 
+        min-height: 400px;
     }
 
+    .separator-bar {
+        width: 100vw; 
+        margin-left: calc(50% - 50vw); 
+    }
+    
+    /* main grid layout (3 columns) */
+    .home-grid {
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-areas:
+            "hero hero hero"
+            "events current-weather forecast";
+    }
+
+    /* spotlights layout (3 columns) */
+    .spotlights-grid #spotlights-container {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    
+    
+    /* --- directory page layouts --- */
+    
     header img {
         margin-left: 5rem;
     }
-
-    /* --- navigation styles --- */
-    .navigation ul {
-        width: 100%;
-        margin: 0;
-        justify-content: space-between;
-    }
-    .navigation a { padding: 1rem 1.5rem; }
-
-    /* --- grid view styles --- */
+    
+    /* grid view styles (3 columns) */
     #member-cards.grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
         padding: 0;
     }
 
-    /* --- list view styles --- */
+    /* list view styles */
     #member-cards.list section {
         grid-template-columns: 2fr 4fr 1.5fr 1fr;
         border-bottom: 1px solid var(--secondary-color);
@@ -36,8 +91,12 @@
         text-align: left;
         display: grid;
     }
-    #member-cards.list section:hover { background: var(--hover-subtle); }
-    #member-cards.list section img { display: none; }
+    #member-cards.list section:hover { 
+        background: var(--hover-subtle); 
+    }
+    #member-cards.list section img { 
+        display: none; 
+    }
     
     /* list item placement */
     #member-cards.list section h3 { grid-column: 1; margin: 0; }
