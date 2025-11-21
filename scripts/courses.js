@@ -1,11 +1,53 @@
 /* --- courses --- */
 const courses = [
-    { courseCode: "CSE PC 110", name: "Introduction to Programming", credits: 2, completed: true, description: "Introduces fundamental programming concepts and practices using JavaScript/Python.", technology: ["JavaScript", "Python", "VS Code"] },
-    { courseCode: "WDD 130", name: "Web Fundamentals", credits: 2, completed: true, description: "Covers the foundations of web development, including basic HTML structure and CSS styling.", technology: ["HTML5", "CSS3", "Git"] },
-    { courseCode: "CSE 111", name: "Programming with Functions", credits: 2, completed: true, description: "Focuses on writing clean, modular code using functions, data structures, and conditional logic.", technology: ["JavaScript", "Functions", "Testing"] },
-    { courseCode: "CSE 210", name: "Programming with Classes", credits: 2, completed: true, description: "Explores object-oriented programming (OOP) principles, inheritance, and polymorphism.", technology: ["C#", "OOP", "Debugging"] },
-    { courseCode: "WDD 131", name: "Dynamic Web Fundamentals", credits: 2, completed: true, description: "Teaches fundamental concepts of DOM manipulation and event handling using JavaScript.", technology: ["JavaScript", "DOM", "Events", "Forms"] },
-    { courseCode: "WDD 231", name: "Web Frontend Development I", credits: 2, completed: false, description: "Advanced frontend development focusing on APIs, complex data fetching, and contemporary design patterns.", technology: ["JavaScript", "Fetch API", "Modals", "JSON"] }
+    { 
+        courseCode: "CSE 110", 
+        name: "Introduction to Programming", 
+        credits: 2, 
+        completed: true, 
+        description: "Focuses on fundamental programming concepts, using Python, and the basics of algorithm design and problem-solving.", 
+        technology: ["Python", "Algorithms", "Conditionals"] 
+    },
+    { 
+        courseCode: "WDD 130", 
+        name: "Web Fundamentals", 
+        credits: 2, 
+        completed: true, 
+        description: "Covers the foundations of building web pages using semantic HTML, basic CSS styling, and introduces version control with Git.", 
+        technology: ["HTML5", "CSS3", "Git"] 
+    },
+    { 
+        courseCode: "CSE 111", 
+        name: "Programming with Functions", 
+        credits: 2, 
+        completed: true, 
+        description: "Teaches how to write organized and reusable code by focusing on functions, data structures, and debugging techniques.", 
+        technology: ["Python", "Functions", "Data Structures"] 
+    },
+    { 
+        courseCode: "WDD 131", 
+        name: "Dynamic Web Fundamentals", 
+        credits: 2, 
+        completed: true, 
+        description: "Introduces core JavaScript for creating interactive web experiences, focusing on DOM manipulation, event handling, and forms.", 
+        technology: ["JavaScript", "DOM", "Events", "Forms"] 
+    },
+    { 
+        courseCode: "CSE 210", 
+        name: "Programming with Classes", 
+        credits: 2, 
+        completed: true, 
+        description: "Explores Object-Oriented Programming (OOP) principles, including inheritance, polymorphism, and class design using C#.", 
+        technology: ["C#", "OOP", "Encapsulation"] 
+    },
+    { 
+        courseCode: "WDD 231", 
+        name: "Web Frontend Development I", 
+        credits: 2, 
+        completed: false, 
+        description: "Advanced frontend topics including consuming external APIs, data fetching, modern JavaScript features (e.g., Modals, JSON), and responsive layouts.", 
+        technology: ["JavaScript", "Fetch API", "Modals", "JSON", "Responsive Design"] 
+    },
 ];
 
 /* --- dom elements --- */
