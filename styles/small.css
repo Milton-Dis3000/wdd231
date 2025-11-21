@@ -215,3 +215,51 @@ footer {
 .social-links a:hover img {
     filter: invert(0%); 
 }
+
+
+
+
+
+/* --- modal dialog styles --- */
+
+dialog {
+  border: 1px solid #333; 
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: white;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.4);
+  width: 90%;
+  max-width: 600px;
+}
+
+dialog h3 {
+  background-color: #444; 
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: -1.5rem -1.5rem 1rem -1.5rem; 
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+dialog p {
+  text-align: left;
+}
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #e74c3c; 
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10;
+}
