@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank You - Latacunga Chamber of Commerce</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 640px)">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 960px)">
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.webp" alt="Latacunga Chamber Logo" width="60" loading="lazy">
+        <span>Latacunga Chamber of Commerce</span>
+        <button id="menu" class="hamburger" aria-label="Open navigation"></button>
+    </header>
+
+    <nav class="navigation" aria-label="Primary navigation">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main class="thankyou-page">
+        <section class="card" style="max-width: 500px; margin: 2rem auto;">
+            <h1>Thank You for Joining!</h1>
+            <p>Your application has been successfully submitted. We will contact you soon to finalize your membership.</p>
+            
+            <div id="results" class="submission-details" style="text-align: left; padding: 1rem 0;">
+                <p style="text-align: center;">Loading details...</p>
+            </div>
+            
+            <p><a href="index.html" class="cta-button" style="margin-top: 1rem;">Return to Home Page</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+
+            <div class="social-links">
+                <a href="https://github.com/Milton-Dis3000" target="_blank" rel="noopener noreferrer">
+                    <img src="images/github.svg" alt="GitHub" width="24" height="24">
+                </a>
+                <a href="https://www.linkedin.com/in/milthon-e-sigcha-242849220" target="_blank" rel="noopener noreferrer">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                </a>
+                <a href="https://www.instagram.com/miltonefrainsigc" target="_blank" rel="noopener noreferrer">
+                    <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+                </a>
+            </div>
+
+            <p>&copy; <span id="currentyear"></span> | Dis. Milthon Sigcha | Ecuador | WDD231</p>
+            <p>Last Modified: <span id="lastmodified"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        // URLSearchParams logic
+        const params = new URLSearchParams(window.location.search);
+        const resultsDiv = document.querySelector('#results');
+
+        if (params.has('fname')) {
+            // Required Fields: first name, last name, email, mobile number, business name, timestamp
+            const fname = params.get('fname');
+            const lname = params.get('lname');
+            const email = params.get('email');
+            const phone = params.get('phone');
+            const orgname = params.get('orgname');
+            const timestamp = params.get('timestamp');
+            
+            // Date format for the timestamp
+            const submissionDate = new Date(timestamp).toLocaleDateString("en-US", {
+                year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+            });
+            
+            resultsDiv.innerHTML = `
+                <h3>Application Summary</h3>
+                <p><strong>Applicant:</strong> ${fname} ${lname}</p>
+                <p><strong>Organization:</strong> ${orgname}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <hr>
+                <p><strong>Submitted On:</strong> ${submissionDate}</p>
+            `;
+        } else {
+            resultsDiv.innerHTML = '<p style="text-align: center;">No application details were found. Please check your submission.</p>';
+        }
+        
+    </script>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

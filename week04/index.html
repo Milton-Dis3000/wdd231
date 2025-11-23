@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Appointment Form</title>
+    </head>
+<body>
+    <main>
+        <h1>Temple Appointment</h1>
+
+        <form method="GET" action="thanks.html" class="designOne">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="first">First Name</label>
+                <input type="text" id="first" name="first" required>
+
+                <label for="last">Last Name</label>
+                <input type="text" id="last" name="last" required>
+
+                <label for="phone">Cell Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select Ordinance</legend>
+                <input type="radio" id="proxy-bap" name="ordinance" value="Proxy Baptism" required>
+                <label for="proxy-bap">Proxy Baptism</label><br>
+
+                <input type="radio" id="proxy-init" name="ordinance" value="Proxy Initiatory">
+                <label for="proxy-init">Proxy Initiatory</label><br>
+
+                <input type="radio" id="proxy-endow" name="ordinance" value="Proxy Endowment">
+                <label for="proxy-endow">Proxy Endowment</label><br>
+
+                <input type="radio" id="proxy-seal" name="ordinance" value="Proxy Sealing">
+                <label for="proxy-seal">Proxy Sealing</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Date and Location</legend>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="location">Location</label>
+                <select id="location" name="location">
+                    <option value="none" disabled selected>None</option>
+                    <option value="latacunga">Latacunga</option>
+                    <option value="quito">Quito</option>
+                    <option value="guayaquil">Guayaquil</option>
+                </select>
+            </fieldset>
+
+            <button type="submit">Submit Appointment</button>
+        </form>
+    </main>
+</body>
+</html>

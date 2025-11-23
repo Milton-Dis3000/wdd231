@@ -116,3 +116,33 @@
         padding: 0.8rem 1rem;
     }
 }
+
+
+
+
+
+/* --- JOIN PAGE (Tablet - min-width: 640px) --- */
+
+.join-page-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px;
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: start;
+}
+.membership-form-section {
+    grid-column: 1 / 2; 
+    margin-bottom: 0; 
+}
+.membership-levels-section {
+    grid-column: 2 / 3; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+#cards-container {
+    padding: 0; 
+    gap: 0.75rem; 
+}

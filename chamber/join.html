@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Join - Latacunga Chamber of Commerce</title>
+
+    <meta name="description" content="Apply to join the Latacunga Chamber of Commerce and explore membership benefits.">
+    <meta name="author" content="Milthon E. Sigcha">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 640px)">
+    <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 960px)">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.webp" alt="Latacunga Chamber Logo" width="60" loading="lazy">
+        <span>Latacunga Chamber of Commerce</span>
+        <button id="menu" class="hamburger" aria-label="Open navigation"></button>
+    </header>
+
+    <nav class="navigation" aria-label="Primary navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+        </ul>
+    </nav>
+
+    <main class="join-page-grid">
+        
+        <section class="membership-form-section">
+            <h2>Membership Application Form</h2>
+            
+            <form method="get" action="thankyou.html">
+                <fieldset>
+                    <legend> Applicant Information </legend>
+                    
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" required autocomplete="given-name">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" required autocomplete="family-name">
+
+                    <label for="title">Organizational Title</label>
+                    <input type="text" id="title" name="title" title="Title must contain only letters, hyphens, and spaces. Min 7 characters." 
+                            autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" required>
+                    
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com">
+
+                    <label for="phone">Mobile Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                    
+                    <label for="orgname">Organization Name</label>
+                    <input type="text" id="orgname" name="orgname" required autocomplete="organization">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership Selection</legend>
+                    
+                    <label for="mlevel">Membership Level</label>
+                    <select id="mlevel" name="mlevel" required>
+                        <option value="" disabled selected>Select a Level...</option>
+                        <option value="np">NP Membership (No Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+
+                    <label for="bizdesc">Business Description</label>
+                    <textarea id="bizdesc" name="bizdesc" title="Describe your business"></textarea>
+                </fieldset>
+
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+
+
+        <section class="membership-levels-section">
+            <h2>Membership Levels</h2>
+            <div id="cards-container">
+                <div class="level-card" data-level="np">
+                    <h3>Non Profit Membership</h3>
+                    <p class="cost">Free</p>
+                    <button class="modal-link" data-level="np">Learn More</button>
+                </div>
+                <div class="level-card" data-level="bronze">
+                    <h3>Bronze Membership</h3>
+                    <p class="cost">$50 / yr</p>
+                    <button class="modal-link" data-level="bronze">Learn More</button>
+                </div>
+                <div class="level-card" data-level="silver">
+                    <h3>Silver Membership</h3>
+                    <p class="cost">$150 / yr</p>
+                    <button class="modal-link" data-level="silver">Learn More</button>
+                </div>
+                <div class="level-card" data-level="gold">
+                    <h3>Gold Membership</h3>
+                    <p class="cost">$300 / yr</p>
+                    <button class="modal-link" data-level="gold">Learn More</button>
+                </div>
+            </div>
+        </section>
+        
+        <dialog id="membership-modal">
+            <h3 id="modal-title">Membership Benefits</h3>
+            <div id="modal-content"></div>
+            <button id="close-modal" aria-label="Close dialog">&times;</button>
+        </dialog>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+
+            <div class="social-links">
+                <a href="https://github.com/Milton-Dis3000" target="_blank" rel="noopener noreferrer">
+                    <img src="images/github.svg" alt="GitHub" width="24" height="24">
+                </a>
+                <a href="https://www.linkedin.com/in/milthon-e-sigcha-242849220" target="_blank" rel="noopener noreferrer">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                </a>
+                <a href="https://www.instagram.com/miltonefrainsigc" target="_blank" rel="noopener noreferrer">
+                    <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+                </a>
+            </div>
+
+            <p>&copy; <span id="currentyear"></span> | Dis. Milthon Sigcha | Ecuador | WDD231</p>
+            <p>Last Modified: <span id="lastmodified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script> 
+    <script src="scripts/join.js" defer></script> 
+</body>
+</html>
