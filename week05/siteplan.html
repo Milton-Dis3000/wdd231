@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan - Latacunga Quotes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #222323;
+            --accent-color: #FFD000;
+            --background-color: #FFFFFF;
+            --secondary-bg: #DBDBDB;
+            
+            --font-heading: 'Momo Trust Display', serif;
+            --font-body: 'Raleway', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--primary-color);
+            background-color: var(--background-color);
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--accent-color); 
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+        }
+
+        h1 {
+            color: var(--accent-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        .section {
+            background-color: var(--secondary-bg);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        .color-sample {
+            display: inline-block;
+            width: 50px;
+            height: 20px;
+            border: 1px solid var(--primary-color);
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .accent-text {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .wireframe-img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--primary-color);
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Latacunga Quotes - Individual Project Site Plan</h1>
+    </header>
+
+    <main>
+        
+        <section class="section" id="site-name">
+            <h2>Site Name & Rationale</h2>
+            <p><strong>Site Name:</strong> Latacunga Quotes</p>
+            <p><strong>Rationale:</strong> This name combines the location (Latacunga) with the site's primary function (Quotation) into a short, memorable, and descriptive title. It is direct and professional.</p>
+        </section>
+
+        <section class="section" id="logo">
+            <h2>Logo and Branding</h2>
+            <p>The logo will be simple, modern, and easily recognizable, likely featuring a stylized taxi or location pin, using the primary yellow and black color scheme.</p>
+            
+            <img 
+                src="images/logo.png" 
+                alt="Tentative Logo for Latacunga Quotes" 
+                style="max-width: 150px; height: auto; border: 1px solid var(--primary-color);"
+            >
+        </section>
+
+        <section class="section" id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>The site's primary purpose is to provide a **transparent, reliable, and real-time utility** for customers to obtain estimated fare quotes for taxi services in the Latacunga region. It will resolve the current lack of cost visibility by consuming external distance APIs and presenting the results alongside the cooperative's available fleet.</p>
+        </section>
+
+        <section class="section" id="scenarios">
+            <h2>Target Audience Scenarios (2+)</h2>
+            <p>These questions represent the target audience's needs and drive the site's content:</p>
+            <ul>
+                <li><strong>How much will a ride from the terminal to the historic center of Latacunga cost right now?</strong> (Addressed on the Quotation Page)</li>
+                <li><strong>What types of vehicles (e.g., standard, executive) are available in the cooperative's fleet?</strong> (Addressed by the Featured Fleet section using JSON data)</li>
+            </ul>
+        </section>
+
+        <section class="section" id="color-scheme">
+            <h2>Color Scheme</h2>
+            <p>The selected scheme uses a high-contrast, professional, and energetic palette:</p>
+            <ul>
+                <li><strong>Primary Text / Background:</strong> 
+                    <span class="color-sample" style="background-color: var(--primary-color);"></span> <code>#222323</code> (Dark Black/Gray). Used for headings, body text, and footer background. Provides strong contrast on white.
+                </li>
+                <li><strong>Accent / CTA:</strong> 
+                    <span class="color-sample" style="background-color: var(--accent-color);"></span> <code>#FFD000</code> (Bright Yellow). Used for primary call-to-action buttons (CTA), active links, and visual accents, conveying energy and urgency.
+                </li>
+                <li><strong>Background:</strong> 
+                    <span class="color-sample" style="background-color: var(--background-color);"></span> <code>#FFFFFF</code> (White). Used for the main body and form cards.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section" id="typography">
+            <h2>Typography</h2>
+            <p>A maximum of three fonts are selected to maintain clarity and hierarchy:</p>
+            <ul>
+                <li><strong>Headings (H1, H2, H3):</strong> <span class="accent-text">Momo Trust Display</span> (Used for visual impact and branding).</li>
+                <li><strong>Body Text / Secondary Elements:</strong> <span class="accent-text">Raleway</span> (Used for paragraphs, forms, and small text due to its excellent readability).</li>
+            </ul>
+        </section>
+
+        <section class="section" id="wireframe">
+            <h2>Home Page Wireframes</h2>
+            <p>The wireframes for the Request Page (index.html) focus on mobile-first design, prioritizing the quotation form. The form is the main Call-to-Action (CTA).</p>
+            
+            <h3>Desktop View Sketch (Main Request Form)</h3>
+            <p>The desktop view utilizes a multi-column grid, placing the main Request Form prominently at the center, ensuring maximum visibility and ease of use.</p>
+            
+            <img 
+                src="images/desktop-wireframe.webp" 
+                alt="Wireframe of the desktop view with centralized form"
+                class="wireframe-img">
+
+            <h3>Mobile View Sketch (Stacked Form)</h3>
+            <p>The mobile view stacks content vertically, placing the primary navigation (hidden under the hamburger menu) and the CTA form high up for immediate interaction on smaller screens.</p>
+            
+            <img 
+                src="images/mobil-wireframe.webp" 
+                alt="Wireframe of the mobile view with stacked form"
+                class="wireframe-img">
+        </section>
+        
+    </main>
+</body>
+</html>
