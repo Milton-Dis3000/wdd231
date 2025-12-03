@@ -649,3 +649,128 @@ footer a {
 #close-modal:hover {
     background-color: var(--primary-color);
 }
+
+
+
+
+
+
+
+
+/* --- DISCOVER PAGE (Mobil) --- */
+.page-title {
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+/* --- Local Storage Message Card --- */
+.welcome-card {
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+.welcome-card .card-title {
+    background-color: var(--primary-color);
+}
+#visit-message {
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* --- Card General Styling (Mobile - 1 Column) --- */
+.place-cards-grid {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 95%;
+    margin: 0 auto 2rem auto;
+}
+
+.discover-card {
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: 
+        "name-area"
+        "image-area"
+        "description-area"
+        "location-area"
+        "button-area";
+    gap: 0.5rem;
+    min-height: 400px;
+}
+
+.discover-card h3 {
+    grid-area: name-area;
+    font-size: 1.3em;
+    color: var(--primary-color);
+    margin-top: 0;
+    text-align: center;
+}
+.discover-card .image-area {
+    grid-area: image-area;
+    display: flex;
+    align-items: center;
+}
+.discover-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 0.5rem;
+}
+.discover-card .description-area {
+    grid-area: description-area;
+    font-size: 0.95em;
+    line-height: 1.4;
+    padding: 0 0.5rem;
+    text-align: center;
+}
+.discover-card .location-area {
+    grid-area: location-area;
+    font-size: 0.9em;
+    font-style: italic;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+    text-align: center;
+}
+
+/* --- Button area --- */
+.discover-card .button-area {
+    grid-area: button-area;
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.learn-more-button {
+    display: block;
+    width: 90%;
+    margin: 0 auto; 
+    padding: 0.75rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    min-width: 48px; 
+    min-height: 48px; 
+}
+.learn-more-button:hover {
+    background-color: #e6b100;
+}
+
+/* --- Image Hover Effect --- */
+.discover-card img:hover {
+    transform: none; 
+    box-shadow: none;
+}

@@ -121,3 +121,78 @@
 }
 
 }
+
+
+
+
+
+
+/* --- DISCOVER PAGE (Desktop - 3 Columns) --- */
+
+.discover-page-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.place-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 1.5rem;
+    gap: 2.5rem 2rem;
+}
+
+.discover-card {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto 1fr auto auto; 
+    grid-template-areas: 
+        "name-area"
+        "image-area"
+        "description-area"
+        "location-area"
+        "button-area";
+    padding: 1.5rem;
+    gap: 0.75rem;
+    min-height: 480px; 
+}
+
+/* --- Content alignment to the center --- */
+.discover-card h3,
+.discover-card .description-area,
+.discover-card .location-area {
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+/* --- Image styling --- */
+.discover-card .image-area {
+    grid-area: image-area;
+    padding: 0;
+    margin: 0;
+}
+.discover-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; 
+}
+
+/* --- Button area anchored to the bottom --- */
+.discover-card .button-area {
+    grid-area: button-area;
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: center; 
+    padding-top: 1rem;
+}
+
+.learn-more-button {
+    width: 80%;
+    margin: 0 auto; 
+}
+
+/* --- Image Hover Effect --- */
+.discover-card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.discover-card:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 51, 102, 0.4);
+}

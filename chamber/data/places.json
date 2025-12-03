@@ -1,0 +1,68 @@
+{
+  "places": [
+    {
+      "name": "Latacunga Municipal Building",
+      "address": "Central Park, Latacunga",
+      "description": "The main municipal government building featuring historic architecture and serving as an important administrative center in the city.",
+      "photo_link": "municipio-latacunga.webp",
+      "link": "https://www.latacunga.gob.ec/",
+      "external": "https://maps.app.goo.gl/VtXhEzLi1z5hH5xC6"
+    },
+    {
+      "name": "Cotopaxi Culture House (CCE)",
+      "address": "Av. Cinco de Junio, Latacunga",
+      "description": "The leading cultural institution in Cotopaxi, offering art exhibitions, theater performances, workshops, and community events.",
+      "photo_link": "casa-cultura-cotopaxi.webp",
+      "link": "https://www.facebook.com/ccecotopaxi/",
+      "external": "https://maps.app.goo.gl/KtBgxJ9mzqB6cWbB8"
+    },
+    {
+      "name": "ESPE Latacunga University",
+      "address": "Main Avenue, La Calera",
+      "description": "A campus of the ESPE Armed Forces University, recognized for its academic excellence, innovation, and technological development.",
+      "photo_link": "espe-latacunga.webp",
+      "link": "https://espe-el.espe.edu.ec/",
+      "external": "https://maps.app.goo.gl/C4nWj5Yk7h3LsEZG9"
+    },
+    {
+      "name": "Poultier Mills (Molinos Poultier)",
+      "address": "Near Eloy Alfaro Avenue",
+      "description": "A historic mill complex that represents Latacunga’s industrial roots and its historical contribution to local agriculture.",
+      "photo_link": "molinos-poultier.webp",
+      "link": "https://www.facebook.com/MolinosPoultier/?locale=es_LA",
+      "external": "https://maps.app.goo.gl/wj2oMKo3brmZqvUj6"
+    },
+    {
+      "name": "Vicente León Park",
+      "address": "Downtown Latacunga",
+      "description": "The city's central park, surrounded by colonial landmarks and a vibrant local atmosphere. A popular spot for gatherings and recreation.",
+      "photo_link": "parque-vicente-leon.webp",
+      "link": "https://culturappatrimonio.wordpress.com/2018/05/31/monumento-vicente-leon/",
+      "external": "https://maps.app.goo.gl/nh4r7PwaA2DgM8m59"
+    },
+    {
+      "name": "Cotopaxi Volcano National Park",
+      "address": "Cotopaxi National Park",
+      "description": "A world-famous national park home to the Cotopaxi Volcano, offering breathtaking landscapes, hiking routes, and protected wildlife.",
+      "photo_link": "volcan-cotopaxi.webp",
+      "link": "https://es.wikipedia.org/wiki/Parque_nacional_Cotopaxi",
+      "external": "https://maps.app.goo.gl/YkXYo9YB3dFmyJwC8"
+    },
+    {
+      "name": "Quilotoa Lagoon",
+      "address": "Zumbahua Parish, Cotopaxi",
+      "description": "A stunning turquoise crater lake known for its dramatic views, cultural surroundings, and outdoor adventure opportunities.",
+      "photo_link": "laguna-quilotoa.webp",
+      "link": "https://es.wikipedia.org/wiki/Quilotoa",
+      "external": "https://maps.app.goo.gl/RfVaRLq8yZTfDhA9A"
+    },
+    {
+      "name": "Hacienda La Ciénega",
+      "address": "Panamericana Sur, Lasso",
+      "description": "A historic colonial hacienda converted into a boutique hotel, offering elegant architecture and deep cultural heritage.",
+      "photo_link": "hacienda-lacienega.webp",
+      "link": "https://www.haciendalacienega.com/",
+      "external": "https://maps.app.goo.gl/69b19Vjd8tVwKXjq6"
+    }
+  ]
+}

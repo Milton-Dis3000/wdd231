@@ -1,7 +1,7 @@
 /* --- medium (tablet) view --- */
 @media screen and (min-width: 640px) {
 
-    /* --- header styles --- */
+    /* --- Header Styles --- */
     .hamburger { 
         display: none; 
     }
@@ -13,7 +13,7 @@
         padding-left: 2rem; 
     }
 
-    /* --- navigation styles --- */
+    /* --- Navigation Styles --- */
     .navigation, .navigation.open {
         display: block;
         background-color: var(--secondary-color);
@@ -44,13 +44,13 @@
         font-weight: 700;
     }
 
-    /* --- main padding and general styles --- */
+    /* --- Main Padding and General Styles --- */
     main {
         padding-left: 0; 
         padding-right: 0;
     }
     
-    /* --- HOME PAGE (tablet) --- */
+    /* --- HOME PAGE (Tablet) --- */
     .home-grid {
         grid-template-columns: 1fr 1fr 1fr; 
         grid-template-areas:
@@ -61,12 +61,12 @@
         padding: 1rem;
     }
 
-    /* assign grid areas */
+    /* --- Assign Grid Areas --- */
     .events-section          { grid-area: events; }
     .current-weather-section { grid-area: current-weather; }
     .forecast-section        { grid-area: forecast; }
     
-    /* weather card inner grid adjustment */
+    /* --- Weather Card Inner Grid Adjustment --- */
     .weather-details-grid {
         display: grid;
         grid-template-columns: 1fr 1.5fr; 
@@ -94,7 +94,7 @@
         text-align: left;
     }
 
-    /* spotlights grid */
+    /* --- Spotlights Grid --- */
     .spotlights-grid {
         margin: 0 auto;
         max-width: 900px; 
@@ -104,45 +104,110 @@
         grid-template-columns: 1fr 1fr; 
     }
     
-    /* --- directory styles --- */
+    /* --- Directory Styles --- */
     #member-cards.grid {
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
     
-    /* list view styles */
+    /* --- List View Styles --- */
     #member-cards.list section {
         grid-template-columns: 2fr 4fr 1.5fr 1fr;
         padding: 0.8rem 1rem;
     }
-}
+
+    /* --- JOIN PAGE (Tablet) --- */
+    .join-page-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr; 
+        gap: 20px;
+        padding: 1rem;
+        max-width: 900px;
+        margin: 0 auto;
+        align-items: start;
+    }
+    .membership-form-section {
+        grid-column: 1 / 2; 
+        margin-bottom: 0; 
+    }
+    .membership-levels-section {
+        grid-column: 2 / 3; 
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #cards-container {
+        padding: 0; 
+        gap: 0.75rem; 
+    }
 
 
 
+    /* --- DISCOVER PAGE (Tablet - 1 Column of Cards) --- */
+    .discover-page-grid {
+        max-width: 900px;
+        margin: 0 auto;
+    }
 
+    .place-cards-grid {
+        grid-template-columns: 1fr; 
+        padding: 1.5rem;
+        gap: 2rem 1.5rem;
+    }
 
-/* --- JOIN PAGE (Tablet - min-width: 640px) --- */
+    .discover-card {
+        grid-template-columns: 1fr 1.5fr; 
+        grid-template-areas: 
+            "image-area name-area"
+            "image-area description-area"
+            "image-area location-area"
+            "image-area button-area"; 
+        padding: 1rem;
+        gap: 0.5rem 1rem;
+        min-height: 250px; 
+    }
 
-.join-page-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr; 
-    gap: 20px;
-    padding: 1rem;
-    max-width: 900px;
-    margin: 0 auto;
-    align-items: start;
-}
-.membership-form-section {
-    grid-column: 1 / 2; 
-    margin-bottom: 0; 
-}
-.membership-levels-section {
-    grid-column: 2 / 3; 
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-#cards-container {
-    padding: 0; 
-    gap: 0.75rem; 
+    /* --- Image area spans all rows on the left --- */
+    .discover-card .image-area {
+        grid-area: image-area;
+        display: block; 
+    }
+
+    .discover-card img {
+        height: 100%; 
+        width: 100%;
+        aspect-ratio: auto; 
+        object-fit: cover;
+    }
+
+    /* --- Text alignment in the right column --- */
+    .discover-card h3 {
+        grid-area: name-area;
+        text-align: left;
+        margin-top: 0;
+    }
+    .discover-card .description-area {
+        grid-area: description-area;
+        text-align: left;
+        padding: 0;
+    }
+    .discover-card .location-area {
+        grid-area: location-area;
+        text-align: left;
+        padding: 0;
+    }
+
+    /* --- Button area fixed to the bottom left of the content column --- */
+    .discover-card .button-area {
+        grid-area: button-area;
+        display: flex;
+        align-items: flex-end; 
+        justify-content: flex-start; 
+        padding: 0;
+    }
+
+    .learn-more-button {
+        width: auto; 
+        margin: 0; 
+    }
 }

@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - Latacunga Chamber of Commerce</title>
+    <title>Discover Latacunga</title>
 
-    <meta name="description" content="Welcome to the Latacunga Chamber of Commerce. Promoting business growth and community in the region.">
+    <meta name="description" content="Discover tourist attractions, demographics, and key features of Latacunga, Ecuador.">
     <meta name="author" content="Milthon E. Sigcha">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 640px)">
     <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 960px)">
 
-    <meta property="og:title" content="Latacunga Chamber Home">
-    <meta property="og:description" content="Official home page for the Latacunga Chamber of Commerce.">
+    <meta property="og:title" content="Discover Latacunga">
+    <meta property="og:description" content="Explore the best places in Latacunga for visitors and prospective chamber members.">
     <meta property="og:image" content="https://milton-dis3000.github.io/wdd231/chamber/images/logo.webp">
-    <meta property="og:url" content="https://milton-dis3000.github.io/wdd231/chamber/index.html">
+    <meta property="og:url" content="https://milton-dis3000.github.io/wdd231/chamber/discover.html">
 
     <link rel="icon" href="favicon.ico">
 </head>
@@ -35,57 +35,28 @@
 
     <nav class="navigation" aria-label="Primary navigation">
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
-            <li><a href="discover.html">Discover</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
             <li><a href="join.html">Join</a></li>
         </ul>
     </nav>
 
-    <main class="home-grid">
-
-        <section class="hero-section">
-            <picture>
-                <source srcset="images/hero-large.webp" media="(min-width: 960px)">
-                <img src="images/hero-medium.webp" alt="Latacunga Cityscape" loading="lazy">
-            </picture>
-
-            <div class="cta-box">
-                <h1 class="cta-heading">Join the Chamber Today!</h1>
-                <a href="join.html" class="cta-button">Join Now!</a>
-            </div>
+    <main class="discover-page-grid">
+        <h1 class="page-title">Discover Latacunga</h1>
+        
+        <section id="welcome-message" class="card welcome-card">
+            <h2 class="card-title">Welcome Back!</h2>
+            <p id="visit-message"></p>
         </section>
 
-        <section class="card events-section" aria-label="Current Chamber Event">
-            <h2 class="card-title">Chamber Current Event</h2>
-            <p class="event-details-title">Annual Business Seminar</p>
-            <p>Nov 25th, 9:00 AM at Central Event Hall</p>
-            <a href="#" class="details-link">View Details</a>
-        </section>
-
-        <section class="card current-weather-section" aria-label="Current Weather">
-            <h2 class="card-title">Latacunga - Current Weather</h2>
-            <div id="weather-display"></div>
-        </section>
-
-        <section class="card forecast-section" aria-label="3-Day Weather Forecast">
-            <h2 class="card-title">Latacunga - 3-Day Forecast</h2>
-            <div id="forecast-display"></div>
-        </section>
+        <div id="place-cards" class="place-cards-grid">
+        </div>
 
     </main>
 
-    <div class="separator-bar">
-        <h2 class="separator-title">Featured Businesses</h2>
-    </div>
-
-    <section class="spotlights-section spotlights-grid" aria-label="Spotlight Member Advertisements">
-        <div id="spotlights-container"></div>
-    </section>
-
     <footer>
         <div class="footer-inner">
-
             <div class="social-links">
                 <a href="https://github.com/Milton-Dis3000" target="_blank" rel="noopener noreferrer">
                     <img src="images/github.svg" alt="GitHub" width="24" height="24">
@@ -104,8 +75,7 @@
     </footer>
 
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlights.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
 
 </body>
 </html>
