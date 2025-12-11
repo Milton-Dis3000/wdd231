@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Latacunga Quotes</title>
+
+  <meta name="description" content="Get real-time taxi fare quotes in Latacunga with our premium fleet, transparent rates, and safe trips.">
+  <meta name="author" content="Milthon E. Sigcha">
+
+  <meta property="og:title" content="Latacunga Quotes - Home">
+  <meta property="og:description" content="Real-time, transparent taxi fare quotes for Latacunga and nearby areas.">
+  <meta property="og:image" content="images/logo.webp">
+  <meta property="og:url" content="https://milton-dis3000.github.io/wdd231/final/index.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display:wght@400;700&family=Raleway:wght@300;400;700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display:wght@400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 640px)">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 960px)">
+  <link rel="icon" href="favicon.ico">
+</head>
+
+
+<body>
+  <header>
+    <div class="logo-and-title">
+      <img src="images/logo.png" alt="Latacunga Quotes Logo" width="60" height="60" loading="lazy">
+      <span class="site-title-text">Latacunga Quotes</span>
+    </div>
+
+    <button id="menu" class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"></button>
+  </header>
+
+  <nav id="primary-nav" class="navigation" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="quote.html">QUOTES</a></li>
+      <li><a href="company.html">COMPANY</a></li>
+    </ul>
+  </nav>
+
+  <main class="home-grid">
+    <section class="hero-section" aria-label="Main hero image and message">
+      <picture class="hero-image-placeholder">
+        <source srcset="images/hero.webp" media="(min-width: 960px)">
+        <img src="images/small.webp" alt="Latacunga city and surrounding area" loading="lazy">
+      </picture>
+
+      <h1 class="hero-title">Travel safely!</h1>
+
+      <section class="card current-weather-section" aria-labelledby="weather-heading">
+        <h2 class="weather-title" id="weather-heading">Latacunga - Current Weather</h2>
+        <div id="weather-display"></div>
+      </section>
+    </section>
+
+    <section class="card cta-form-section">
+      <h2 class="cta-heading">Quote your ride now!</h2>
+
+      <form method="get" action="result.html" class="form-grid">
+        <input type="hidden" id="autoVehicle" name="vehicle">
+
+        <div class="form-field">
+          <label for="from">
+            <img src="images/location.svg" class="icon" alt="From icon">
+            From:
+          </label>
+          <input type="text" id="from" name="from" placeholder="Terminal Terrestre" required>
+        </div>
+
+        <div class="form-field">
+          <label for="to">
+            <img src="images/pin.svg" class="icon" alt="To icon">
+            To:
+          </label>
+          <input type="text" id="to" name="to" placeholder="Parque Vicente León" required>
+        </div>
+
+        <div class="form-field">
+          <label for="name">
+            <img src="images/user.svg" class="icon" alt="User icon">
+            Name:
+          </label>
+          <input type="text" id="name" name="name" placeholder="Full Name" required>
+          <div class="autocomplete-list"></div>
+        </div>
+
+        <div class="form-field">
+          <label for="phone">
+            <img src="images/phone.svg" class="icon" alt="Phone icon">
+            Phone:
+          </label>
+          <input type="tel" id="phone" name="phone" placeholder="0900000000" pattern="[0-9]{9,10}" required>
+        </div>
+
+        <button class="cta-button full" type="submit">Get Quote</button>
+      </form>
+    </section>
+
+    <div class="separator-bar">
+      <h2 class="separator-title">Featured Premium Fleet</h2>
+    </div>
+
+    <section id="featured-fleet" class="spotlights-section" aria-label="Featured premium vehicles"></section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="social-links">
+        <a href="https://github.com/Milton-Dis3000" target="_blank" rel="noopener noreferrer">
+          <img src="images/github.svg" alt="Visit GitHub profile" width="24" height="24">
+        </a>
+
+        <a href="https://www.linkedin.com/in/milthon-e-sigcha-242849220" target="_blank" rel="noopener noreferrer">
+          <img src="images/linkedin.svg" alt="Visit LinkedIn profile" width="24" height="24">
+        </a>
+
+        <a href="https://www.instagram.com/miltonefrainsigc" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram.svg" alt="Visit Instagram profile" width="24" height="24">
+        </a>
+      </div>
+
+      <p>&copy; <span id="currentyear"></span> | Dis. Milthon Sigcha | Ecuador | WDD231</p>
+      <p>Last Modified: <span id="lastmodified"></span></p>
+
+      <div class="footer-links">
+        <a href="https://www.loom.com/share/83ddabe0141d40d3a5877464663b9da2" target="_blank">Video Demonstration (3-5 min)</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/index.js"></script>
+  <script type="module" src="scripts/weather.js"></script>
+</body>
+</html>

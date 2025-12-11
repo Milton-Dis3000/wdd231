@@ -1,0 +1,103 @@
+/* --- Header & Navigation (Tablet) --- */
+@media screen and (min-width: 640px) {
+
+  .hamburger {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 1.5rem 20px;
+  }
+
+  .site-title-text {
+    padding-left: 2rem;
+  }
+
+  .navigation {
+    display: block;
+    background-color: var(--secondary-color);
+    width: 100%;
+  }
+
+  .navigation ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation li {
+    flex: 1;
+  }
+
+  .navigation a {
+    border-top: none;
+    border-right: 1px solid rgba(255,255,255,0.25);
+    padding: 1rem 0.5rem;
+    background-color: transparent;
+    color: #ffffff;
+  }
+
+  .navigation li:last-child a {
+    border-right: none;
+  }
+
+  .navigation a.active {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+  /* --- Hero Section (Tablet) --- */
+  .hero-title {
+    bottom: 50%;
+    font-size: 4rem;
+    transform: translateX(-50%);
+  }
+
+  /* --- CTA Form (Tablet) --- */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem 2.5rem;
+  }
+
+  .cta-heading {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 0.5rem auto 0 auto;
+  }
+
+  /* --- Featured Fleet (Tablet) --- */
+  #featured-fleet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 0 10px;
+  }
+
+  .separator-title {
+    font-size: 2rem;
+    padding: 8px 0;
+  }
+
+  .separator-bar {
+    padding: 8px 0;
+  }
+
+  /* --- Quote Page (Tablet) --- */
+  .vehicle-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}

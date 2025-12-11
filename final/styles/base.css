@@ -1,0 +1,694 @@
+/* --- Color palette & typography --- */
+:root {
+  --primary-color: #222323;
+  --accent-color: #ffd000;
+  --background-color: #ffffff;
+  --secondary-bg: #dbdbdb;
+  --secondary-color: #333333;
+
+  --font-heading: "Momo Trust Display", serif;
+  --font-body: "Raleway", sans-serif;
+}
+
+/* --- Global styles --- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+main { width: 100%; padding: 10px; }
+
+/* Full-width hero on mobile */
+main > .hero-section {
+  width: 100vw;
+  max-width: 100%;
+  margin-left: calc(50% - 50vw);
+}
+
+.hero-section { position: relative; }
+
+.card {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+/* --- Header & mobile navigation --- */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-and-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+header img {
+  width: 110px;
+  object-fit: contain;
+  padding: 5px;
+}
+
+.site-title-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.hamburger {
+  grid-column: 3 / 4;
+  width: 56px;
+  height: 56px;
+  border: none;
+  background: transparent;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 2.2rem;
+}
+
+.hamburger::before { content: "\2630"; }
+.hamburger.open::before { content: "\00D7"; }
+
+.navigation {
+  display: none;
+  width: 100%;
+  background-color: var(--secondary-color);
+  position: relative;
+  z-index: 5;
+}
+
+.navigation.open { display: block; }
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li { width: 100%; }
+
+.navigation a {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+.navigation a.active,
+.navigation a:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* --- Hero section & title --- */
+.home-grid { display: block; }
+
+.hero-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image-placeholder img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+main .hero-section { max-width: none; }
+
+.hero-title {
+  position: absolute;
+  left: 50%;
+  bottom: 60%;
+  transform: translateX(-50%);
+  color: var(--background-color);
+  padding: 12px 24px;
+  font-size: 4rem;
+  text-align: center;
+  border-radius: 999px;
+  z-index: 5;
+  text-shadow: 0 0 8px rgba(0,0,0,1);
+  letter-spacing: 3px;
+}
+
+/* --- Weather card --- */
+.current-weather-section {
+  background-color: rgba(255,255,255,0.822);
+  backdrop-filter: blur(6px);
+  padding: 0 15px 15px;
+  border-radius: 12px;
+  width: 260px;
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.weather-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 10px 0 12px;
+  letter-spacing: 3px;
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+}
+
+.current-weather-section .weather-title {
+  margin-left: -15px;
+  margin-right: -15px;
+  width: calc(100% + 30px);
+}
+
+.description-line { text-align: center; margin: 10px 0; }
+
+.weather-details-grid {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-temp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current-temp-value { font-size: 1.8rem; font-weight: 700; }
+
+.details-list p { margin: 2px 0; }
+
+/* --- CTA form --- */
+.cta-form-section {
+  background-color: var(--primary-color);
+  padding: 2.5rem;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+  color: #ffffff;
+}
+
+/* Form override inside quote layout */
+.quote-layout .cta-form-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.quote-layout .cta-form-section input { width: 100%; }
+
+.cta-heading {
+  color: var(--accent-color);
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-field { display: flex; flex-direction: column; }
+
+.form-field label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+.form-field input {
+  padding: 0.9rem 1.2rem;
+  border-radius: 50px;
+  border: 1px solid #555;
+  background-color: #f3f3f3;
+  color: #222;
+}
+
+.full { grid-column: 1 / -1; }
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 14px 20px; 
+    border-radius: 999px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;    
+
+    width: 100%;
+    text-decoration: none;
+    margin-top: 1rem;
+        transition: background-color 0.3s ease;
+}
+
+.cta-button:hover { 
+    background-color: #e0b800; 
+}
+
+.cta-button:active { 
+    transform: scale(0.98); 
+}
+
+/* --- Featured fleet --- */
+.separator-bar {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  padding: 12px 0;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.separator-title {
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  text-align: center;
+  margin: 0;
+  padding: 12px 14px;
+  letter-spacing: 2px;
+}
+
+#featured-fleet {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.fleet-card {
+  background-color: var(--background-color);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.15),
+    0 1px 4px rgba(0,0,0,0.08);
+  transition: 0.2s;
+}
+
+.fleet-card:hover {
+  transform: translateY(-4px);
+}
+
+.fleet-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.fleet-card h3 {
+  margin: 12px 0 6px;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.fleet-card p { font-size: 0.95rem; margin: 4px 0; }
+
+.fleet-card .price {
+  font-size: 1.15rem;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+/* --- Quote button on fleet cards --- */
+.quote-btn {
+  display: inline-block;
+  margin-top: 12px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 14px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.quote-btn:hover {
+  background-color: #e6c200;
+  transform: scale(1.03);
+}
+
+.quote-btn:active { transform: scale(0.97); }
+
+/* --- Footer --- */
+footer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 30px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-links img {
+  filter: invert(100%);
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.social-links img:hover { transform: scale(1.1); }
+
+.footer-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.footer-links a:hover { text-decoration: underline; }
+
+/* --- Modal --- */
+dialog#rate-modal {
+  border: none;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+dialog#rate-modal::backdrop {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content h3 {
+  text-align: center;
+  color: var(--accent-color);
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.modal-content p { font-size: 1rem; line-height: 1.5; }
+
+.modal-content .formula {
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px dashed var(--secondary-bg);
+}
+
+#tariff-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+#tariff-details th {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* ===========================================================
+   QUOTE PAGE — BASE LAYOUT
+   =========================================================== */
+
+.quote-main {
+  max-width: 1200px;
+  margin: 40px auto 60px;
+  padding: 0 20px;
+}
+
+.quote-summary { text-align: center; margin-bottom: 30px; }
+.quote-title { font-size: 2.4rem; margin-bottom: 0.5rem; }
+
+.quote-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.vehicle-options h2,
+.quote-result h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* --- Vehicle cards --- */
+.vehicle-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.vehicle-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.1),
+    0 1px 4px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.vehicle-card p {
+  font-size: 0.95rem;
+  margin: 2px 0;
+  line-height: 1.2;
+}
+
+/* --- Form page: selected vehicle preview --- */
+#selected-vehicle {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.1),
+    0 1px 4px rgba(0,0,0,0.08);
+}
+
+#selected-vehicle img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* --- Result page --- */
+.result-box {
+  background-color: var(--secondary-bg);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.quote-table {
+  margin: 16px auto 0;
+  border-collapse: collapse;
+}
+
+.quote-table th { text-align: right; font-weight: 700; }
+.quote-table td { text-align: left; }
+
+/* --- Secondary button --- */
+.secondary-button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--primary-color);
+  background-color: #ffffff;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.secondary-button:hover {
+  background-color: var(--accent-color);
+}
+
+/* ===========================================================
+   SPINNER
+   =========================================================== */
+
+#loading-spinner,
+.spinner {
+  width: 120px;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  animation: pulse 1s infinite ease-in-out;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+/* ===========================================================
+   COMPANY PAGE — HERO
+   =========================================================== */
+
+.clean-hero {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 30px auto 0;
+  max-width: 900px;
+}
+
+/* ===========================================================
+   COMPANY PAGE — IMAGE + TEXT
+   =========================================================== */
+
+.company-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.company-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.company-text { text-align: center; }
+
+.company-text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* --- Why Choose Us list --- */
+.why-list {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-list li {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.why-list li::before {
+  content: "✔";
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+}
+
+
+/* ===========================================================
+   COMPANY PAGE — STATISTICS
+   =========================================================== */
+
+.stats-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 1100px;
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.progress-circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.progress-circle svg {
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+
+.progress-circle .progress {
+  transition: stroke-dashoffset 1.8s ease;
+}
+
+.progress-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,161 @@
+/* --- Desktop Styles (min-width: 960px) --- */
+@media screen and (min-width: 960px) {
+
+  /* --- Main Container --- */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* --- Header & Navigation --- */
+  header {
+    grid-template-columns: auto 1fr auto;
+    padding: 1.5rem 50px;
+  }
+
+  header img {
+    width: 150px;
+  }
+
+  .site-title-text {
+    font-size: 2rem;
+    padding-left: 30px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    display: block;
+    background-color: var(--secondary-color);
+    width: 100%;
+  }
+
+  .navigation ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .navigation li {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .navigation li:last-child {
+    border-right: none;
+  }
+
+  .navigation a {
+    padding: 1rem 2rem;
+    min-width: 150px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+  }
+
+  .navigation a.active {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+
+  /* --- Hero Section --- */
+  .hero-image-placeholder img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .hero-section h1,
+  .hero-title {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    letter-spacing: 4px;
+    text-shadow: 0 0 8px rgba(0,0,0,1);
+  }
+
+  /* --- Weather Card --- */
+  .current-weather-section {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 20;
+    background-color: rgba(255,255,255,0.65);
+    backdrop-filter: blur(6px);
+    padding: 0 15px 15px;
+    border-radius: 12px;
+    width: 260px;
+  }
+
+  /* --- CTA Form --- */
+  .cta-heading {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-form-section {
+    margin-top: 60px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.2rem 3rem;
+  }
+
+  .cta-form-section label {
+    font-size: 1.1rem;
+  }
+
+  .cta-form-section input {
+    font-size: 1.05rem;
+  }
+
+
+.cta-button {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin: 1rem auto 0;
+    padding: 18px; 
+    font-size: 1.3rem; 
+   
+  }
+
+  /* --- Featured Fleet --- */
+  #featured-fleet {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0;
+  }
+
+  .separator-title {
+    padding: 5px 0;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+
+  .separator-bar {
+    padding: 5px 0;
+  }
+
+  /* --- Quote Page Layout --- */
+  .vehicle-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quote-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+}

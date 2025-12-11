@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "model": "Chevrolet Spark GT",
+    "category": "Standard",
+    "capacity": 4,
+    "base_fare": 1.5,
+    "rate_per_km": 0.45,
+    "image_url": "images/spark_standard.webp",
+    "description": "The economical vehicle for your daily commutes. Reliable and efficient."
+  },
+  {
+    "id": 2,
+    "model": "Kia Rio Hatchback",
+    "category": "Standard",
+    "capacity": 4,
+    "base_fare": 1.5,
+    "rate_per_km": 0.45,
+    "image_url": "images/rio_standard.webp",
+    "description": "A comfortable and modern option for short and medium trips."
+  },
+  {
+    "id": 3,
+    "model": "Hyundai Accent",
+    "category": "Standard",
+    "capacity": 4,
+    "base_fare": 1.5,
+    "rate_per_km": 0.45,
+    "image_url": "images/accent_standard.webp",
+    "description": "Spacious and safe, ideal for small families or light luggage."
+  },
+  {
+    "id": 4,
+    "model": "Chevrolet Sail",
+    "category": "Premium",
+    "capacity": 4,
+    "base_fare": 2.25,
+    "rate_per_km": 0.60,
+    "image_url": "images/sail_standard.webp",
+    "description": "A popular vehicle known for its durability and low fuel consumption."
+  },
+  {
+    "id": 5,
+    "model": "Toyota Yaris Sedan",
+    "category": "Premium",
+    "capacity": 4,
+    "base_fare": 2.25,
+    "rate_per_km": 0.60,
+    "image_url": "images/yaris_premium.webp",
+    "description": "Superior comfort and deluxe finishes. Perfect for business travel."
+  },
+  {
+    "id": 6,
+    "model": "Mazda 3",
+    "category": "Premium",
+    "capacity": 4,
+    "base_fare": 2.25,
+    "rate_per_km": 0.60,
+    "image_url": "images/mazda3_premium.webp",
+    "description": "Sporty style and high technology for an executive travel experience."
+  },
+  {
+    "id": 7,
+    "model": "Nissan Sentra",
+    "category": "Premium",
+    "capacity": 4,
+    "base_fare": 2.25,
+    "rate_per_km": 0.60,
+    "image_url": "images/sentra_premium.webp",
+    "description": "Maximum safety and interior space for the demanding passenger."
+  },
+  {
+    "id": 8,
+    "model": "Chevrolet Captiva",
+    "category": "SUV",
+    "capacity": 6,
+    "base_fare": 3.0,
+    "rate_per_km": 0.75,
+    "image_url": "images/captiva_suv.webp",
+    "description": "Ideal for large groups or out-of-town trips with more luggage."
+  },
+  {
+    "id": 9,
+    "model": "Hyundai Tucson",
+    "category": "SUV",
+    "capacity": 5,
+    "base_fare": 3.0,
+    "rate_per_km": 0.75,
+    "image_url": "images/tucson_suv.webp",
+    "description": "4x4 comfort and high clearance for any type of road in the province."
+  },
+  {
+    "id": 10,
+    "model": "Dodge Grand Caravan",
+    "category": "Van",
+    "capacity": 8,
+    "base_fare": 4.5,
+    "rate_per_km": 0.90,
+    "image_url": "images/caravan_van.webp",
+    "description": "The best option for transporting teams, delegations, or multiple passengers."
+  },
+  {
+    "id": 11,
+    "model": "Renault Logan",
+    "category": "Premium",
+    "capacity": 4,
+    "base_fare": 2.25,
+    "rate_per_km": 0.60,
+    "image_url": "images/logan_standard.webp",
+    "description": "A robust and economical vehicle, ideal for daily use."
+  },
+  {
+    "id": 12,
+    "model": "Suzuki Swift",
+    "category": "Standard",
+    "capacity": 4,
+    "base_fare": 1.5,
+    "rate_per_km": 0.45,
+    "image_url": "images/swift_standard.webp",
+    "description": "Compact and agile for the urban traffic of Latacunga."
+  },
+  {
+    "id": 13,
+    "model": "BMW X3",
+    "category": "Luxury",
+    "capacity": 4,
+    "base_fare": 6.0,
+    "rate_per_km": 1.5,
+    "image_url": "images/bmw_x3_luxury.webp",
+    "description": "Maximum luxury and comfort for special occasions. On-demand service."
+  },
+  {
+    "id": 14,
+    "model": "Mercedes E-Class",
+    "category": "Luxury",
+    "capacity": 4,
+    "base_fare": 6.0,
+    "rate_per_km": 1.5,
+    "image_url": "images/mercedes_luxury.webp",
+    "description": "Unparalleled elegance and performance."
+  },
+  {
+    "id": 15,
+    "model": "Toyota Sienna",
+    "category": "Premium",
+    "capacity": 7,
+    "base_fare": 2.25,
+    "rate_per_km": 0.60,
+    "image_url": "images/sienna_van.webp",
+    "description": "High-capacity minivan for large groups with luggage."
+  }
+]

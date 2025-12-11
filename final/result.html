@@ -1,0 +1,101 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Result - Latacunga Quotes</title>
+
+  <meta name="description" content="Taxi fare result with real map and distance.">
+  <meta name="author" content="Milthon E. Sigcha">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display:wght@400;700&family=Raleway:wght@300;400;700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display:wght@400;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="favicon.ico">
+  
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 640px)">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 960px)">
+
+  <link rel="preload" href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" as="style">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+
+  <style>
+    #map {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <header>
+    <div class="logo-and-title">
+      <img src="images/logo.png" alt="Latacunga Quotes Logo" width="60" height="60">
+      <span class="site-title-text">Latacunga Quotes</span>
+    </div>
+
+    <button id="menu" class="hamburger" aria-label="Open navigation" aria-expanded="false"></button>
+  </header>
+
+  <nav id="primary-nav" class="navigation">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="quote.html" class="active">QUOTES</a></li>
+      <li><a href="company.html">COMPANY</a></li>
+    </ul>
+  </nav>
+
+  <main class="quote-main">
+
+    <section class="quote-summary">
+      <h1 class="quote-title">Your Quote Result</h1>
+      <p class="quote-intro">Distance, estimated time and taxi fare based on Latacunga routes.</p>
+    </section>
+
+    <div id="loading-spinner" class="loading-box" style="display:none;">
+      Calculating route... please wait.
+    </div>
+
+    <section class="result-box" id="quote-result"></section>
+
+    <h2 class="separator-title">Route Map</h2>
+    <div id="map"></div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="social-links">
+        <a href="https://github.com/Milton-Dis3000" target="_blank" rel="noopener noreferrer">
+          <img src="images/github.svg" alt="Visit GitHub profile" width="24" height="24">
+        </a>
+        <a href="https://www.linkedin.com/in/milthon-e-sigcha-242849220" target="_blank" rel="noopener noreferrer">
+          <img src="images/linkedin.svg" alt="Visit LinkedIn profile" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com/miltonefrainsigc" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram.svg" alt="Visit Instagram profile" width="24" height="24">
+        </a>
+      </div>
+
+      <p>&copy; <span id="currentyear"></span> | Dis. Milthon Sigcha | Ecuador | WDD231</p>
+      <p>Last Modified: <span id="lastmodified"></span></p>
+
+      <div class="footer-links">
+        <a href="https://www.loom.com/share/83ddabe0141d40d3a5877464663b9da2" target="_blank">Video Demonstration (3-5 min)</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/main.js" defer></script>
+  <script type="module" src="scripts/result.js" defer></script>
+
+</body>
+</html>

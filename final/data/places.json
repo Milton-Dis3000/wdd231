@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Terminal Terrestre Latacunga",
+    "lat": -0.9342239330846314,
+    "lon": -78.62071583446776
+  },
+  {
+    "name": "Parque Vicente León",
+    "lat": -0.9334070116413306,
+    "lon": -78.61499914802424
+  },
+  {
+    "name": "Centro Histórico Latacunga",
+    "lat": -0.9333837685722461,
+    "lon": -78.61538243446776
+  },
+  {
+    "name": "El Salto",
+    "lat": -0.9308438211315049,
+    "lon": -78.61836253267893
+  },
+  {
+    "name": "San Buenaventura",
+    "lat": -0.8948461209174597,
+    "lon": -78.61127442991678
+  },
+  {
+    "name": "La FAE",
+    "lat": -0.9237614207036645,
+    "lon": -78.62100717500635
+  },
+  {
+    "name": "Alaquez",
+    "lat": -0.864931319239809,
+    "lon": -78.59588561912283
+  },
+  {
+    "name": "San Felipe",
+    "lat": -0.9310328958285584,
+    "lon": -78.62900828152377
+  },
+  {
+    "name": "La Estación Latacunga",
+    "lat": -0.9312955891244484,
+    "lon": -78.62296681528473
+  },
+  {
+    "name": "La Calera",
+    "lat": -0.9198858655661095,
+    "lon": -78.62839193267908
+  },
+  {
+    "name": "Niágara",
+    "lat": -0.9579237983222247,
+    "lon": -78.60892619214034
+  },
+  {
+    "name": "Calzacuero",
+    "lat": -0.9469641695183838,
+    "lon": -78.61054807679498
+  },
+  {
+    "name": "Centro de Salud Las Betlemitas",
+    "lat": -0.9461746745907913,
+    "lon": -78.60300430581111
+  },
+  {
+    "name": "ESPE Centro Latacunga",
+    "lat": -0.9356260898739894,
+    "lon": -78.61263682097676
+  },
+  {
+    "name": "ESPE Belisario Quevedo",
+    "lat": -0.997671007669364,
+    "lon": -78.58347745965973
+  },
+  {
+    "name": "Ahspacruz",
+    "lat": -0.9676184414927692,
+    "lon": -78.60011467500557
+  },
+
+  {
+    "name": "La Laguna Latacunga",
+    "lat": -0.9373934965126148,
+    "lon": -78.6074058710423
+  },
+  {
+    "name": "Aeropuerto Cotopaxi",
+    "lat": -0.9188817028453183,
+    "lon": -78.61889567679522
+  },
+
+  {
+    "name": "Laguna de Quilotoa",
+    "lat": -0.8589498423740949,
+    "lon": -78.89416858876598
+  },
+  {
+    "name": "Parque Nacional Cotopaxi",
+    "lat": -0.7005377666403212,
+    "lon": -78.42966506145106
+  },
+
+  {
+    "name": "Municipio de Latacunga",
+    "lat": -0.9327648746330405,
+    "lon": -78.61396407947313
+  },
+  {
+    "name": "Gobernación de Cotopaxi",
+    "lat": -0.9340480665071101,
+    "lon": -78.61546063453332
+  },
+  {
+    "name": "Hospital General de Latacunga",
+    "lat": -0.9353569316818557,
+    "lon": -78.61280681170462
+  },
+  {
+    "name": "Hospital IESS Latacunga",
+    "lat": -0.9412057047908406,
+    "lon": -78.61370969450479
+  },
+  {
+    "name": "Colegio Vicente León",
+    "lat": -0.9219817128965004,
+    "lon": -78.60983820799582
+  },
+  {
+    "name": "Colegio La Salle Latacunga",
+    "lat": -0.9334299249259899,
+    "lon": -78.61333817494065
+  },
+
+  {
+    "name": "Barrio San Felipe",
+    "lat": -0.9203764566675825,
+    "lon": -78.63178472505975
+  },
+  {
+    "name": "Barrio La Merced",
+    "lat": -0.9299099780210757,
+    "lon": -78.61323950850563
+  },
+  {
+    "name": "Ciudadela El Chofer",
+    "lat": -0.9397659312438589,
+    "lon": -78.61928437180698
+  },
+  {
+    "name": "Cementerio General Latacunga",
+    "lat": -0.9353783864942355,
+    "lon": -78.61308576144968
+  },
+
+  {
+    "name": "Estadio La Cocha",
+    "lat": -0.9241094581757023,
+    "lon": -78.6138662852327
+  }
+]
